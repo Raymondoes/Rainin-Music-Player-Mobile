@@ -1,15 +1,16 @@
 {
   "expo": {
-    "name": "rainin-music-player-mobile",
+    "name": "Rainin Music Player ALPHA",
     "slug": "rainin-music-player-mobile",
-    "version": "1.0.0",
+    "version": "0.1a",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/raininicon.png",
     "scheme": "raininmusicplayermobile",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.raymond-aurelius.raininmusicplayermobile"
     },
     "android": {
       "adaptiveIcon": {
@@ -19,18 +20,24 @@
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.raymond_aurelius.raininmusicplayermobile",
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ]
     },
     "web": {
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/raininicon.png"
     },
     "plugins": [
       "expo-router",
+      "expo-audio",
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
+          "image": "./assets/images/sonicwait.gif",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff",
@@ -43,6 +50,12 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "94d1fea5-db47-4ed8-9fd6-4ad84dd0072e"
+      }
     }
   }
 }
