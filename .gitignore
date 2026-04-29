@@ -44,4 +44,4 @@ app-example
 
 # Music
 
-./assets/music
+*.mp3
